@@ -24,7 +24,7 @@ const Index = () => {
       <SEO 
         title="Derrick Charity Home - Supporting Orphans in Uganda" 
         description="Derrick Charity Home provides care, education, and empowerment for orphans and needy children in Uganda, offering food, healthcare, and a loving environment."
-        imageUrl="https://raw.githubusercontent.com/drewversedesign/Derrick-Charity-Home/refs/heads/main/elite_foundation_uganda-18-05-2025-0002.webp"
+        imageUrl="https://github.com/drewversedesign/Derrick-Charity-Home/blob/main/IMG-20250518-WA0045.jpg?raw=true"
         keywords={['charity', 'orphanage', 'uganda', 'children support', 'education', 'healthcare', 'nutrition', 'donation', 'community']}
       />
       <Hero />
