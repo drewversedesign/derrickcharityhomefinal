@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { Send, Mail, User, MessageSquare } from 'lucide-react';
+import { Send, Mail, User, MessageSquare, MapPin, Phone } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
@@ -23,7 +23,7 @@ type FormValues = z.infer<typeof formSchema>;
 
 // EmailJS configuration - Updated with correct template ID
 const EMAILJS_SERVICE_ID = "service_i3h66xg";
-const EMAILJS_TEMPLATE_ID = "template_fgq53nh"; // Updated to the correct template ID
+const EMAILJS_TEMPLATE_ID = "template_fgq53nh"; 
 const EMAILJS_PUBLIC_KEY = "wQmcZvoOqTAhGnRZ3";
 
 const ContactForm = () => {
@@ -48,24 +48,11 @@ const ContactForm = () => {
     
     try {
       // Bot checks
-      // 1. Honeypot check - should be caught by zod, but double-check
-      if (data.honeypot) {
-        console.log('Bot detected via honeypot');
+      if (data.honeypot || Date.now() - data.timestamp < 3000) {
+        console.log('Bot detected');
         toast({
           title: "Error",
           description: "There was a problem with your submission. Please try again.",
-          variant: "destructive"
-        });
-        return;
-      }
-      
-      // 2. Time-based check - Submission should take at least 3 seconds (too fast is likely a bot)
-      const timeDiff = Date.now() - data.timestamp;
-      if (timeDiff < 3000) {
-        console.log(`Bot detected: Form submitted too quickly (${timeDiff}ms)`);
-        toast({
-          title: "Error",
-          description: "Please take a moment to review your message before submitting.",
           variant: "destructive"
         });
         setIsSubmitting(false);
@@ -77,26 +64,19 @@ const ContactForm = () => {
       // Remove honeypot and timestamp fields before sending
       const { honeypot, timestamp, ...emailData } = data;
       
-      // Using parameters exactly as expected by EmailJS templates
       const templateParams = {
         from_name: emailData.name,
         from_email: emailData.email,
         message: emailData.message,
-        to_name: 'WRLDS Team', // Adding recipient name parameter
-        reply_to: emailData.email // Keeping reply_to for compatibility
+        to_name: 'Derrick Charity Home', 
+        reply_to: emailData.email
       };
       
-      console.log('Sending email with params:', templateParams);
-      console.log('Using service:', EMAILJS_SERVICE_ID);
-      console.log('Using template:', EMAILJS_TEMPLATE_ID);
-      console.log('Using public key:', EMAILJS_PUBLIC_KEY);
-      
-      // Send email directly without initializing, as it's not needed with the send method that includes the key
       const response = await emailjs.send(
         EMAILJS_SERVICE_ID,
         EMAILJS_TEMPLATE_ID,
         templateParams,
-        EMAILJS_PUBLIC_KEY // Re-adding the public key parameter
+        EMAILJS_PUBLIC_KEY
       );
       
       console.log('Email sent successfully:', response);
@@ -117,11 +97,6 @@ const ContactForm = () => {
     } catch (error) {
       console.error('Error sending email:', error);
       
-      // More detailed error logging
-      if (error && typeof error === 'object' && 'text' in error) {
-        console.error('Error details:', (error as any).text);
-      }
-      
       toast({
         title: "Error",
         description: "There was a problem sending your message. Please try again later.",
@@ -135,19 +110,19 @@ const ContactForm = () => {
   return <section id="contact" className="bg-gradient-to-b from-white to-black text-white relative py-[25px]">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <div className="inline-block mb-3 px-3 py-1 bg-white text-black rounded-full text-sm font-medium">
+          <div className="inline-block mb-3 px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm font-medium">
             Get In Touch
           </div>
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">
             Contact Us Today
           </h2>
           <p className="text-gray-700 text-lg max-w-2xl mx-auto">
-            Have questions about our AI-powered sensor solutions? Reach out to our team and let's discuss how we can help bring your ideas to life.
+            Have questions about our programs or how you can help? Reach out to our team and let's discuss how we can make a difference together.
           </p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <div className="bg-white rounded-xl shadow-xl p-8 border border-gray-700 text-black">
+          <div className="bg-white rounded-xl shadow-xl p-8 border border-gray-200 text-black">
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                 <FormField control={form.control} name="name" render={({
@@ -183,7 +158,7 @@ const ContactForm = () => {
                       <div className="relative">
                         <MessageSquare className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
                         <FormControl>
-                          <Textarea placeholder="Tell us about your project or inquiry..." className="min-h-[120px] pl-10 resize-none" {...field} />
+                          <Textarea placeholder="Your message or inquiry..." className="min-h-[120px] pl-10 resize-none" {...field} />
                         </FormControl>
                       </div>
                       <FormMessage />
@@ -208,7 +183,7 @@ const ContactForm = () => {
                       </FormControl>
                     </FormItem>} />
                 
-                <button type="submit" disabled={isSubmitting} className="w-full bg-black hover:bg-gray-800 text-white py-3 px-6 rounded-md transition-colors flex items-center justify-center disabled:opacity-70">
+                <button type="submit" disabled={isSubmitting} className="w-full bg-yellow-500 hover:bg-yellow-400 text-gray-900 py-3 px-6 rounded-md transition-colors flex items-center justify-center disabled:opacity-70">
                   {isSubmitting ? "Sending..." : <>
                       Send Message
                       <Send className="ml-2 h-4 w-4" />
@@ -219,15 +194,33 @@ const ContactForm = () => {
           </div>
           
           <div className="space-y-8">
-            <div className="bg-white p-6 rounded-lg shadow-md border border-gray-700 text-black">
-              <div className="w-12 h-12 bg-black rounded-full flex items-center justify-center text-white mb-4">
+            <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200 text-black">
+              <div className="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center text-yellow-600 mb-4">
                 <Mail className="h-6 w-6" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Email Us</h3>
               <p className="text-gray-600 mb-2">For general inquiries:</p>
-              <a href="mailto:info@wrlds.com" className="text-blue-500 hover:underline">hello@wrlds.com</a>
-              <p className="text-gray-600 mt-2 mb-2">
-            </p>
+              <a href="mailto:info@derrickcharityhome.org" className="text-yellow-600 hover:underline">info@derrickcharityhome.org</a>
+            </div>
+            
+            <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200 text-black">
+              <div className="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center text-yellow-600 mb-4">
+                <MapPin className="h-6 w-6" />
+              </div>
+              <h3 className="text-xl font-semibold mb-2">Our Location</h3>
+              <p className="text-gray-600">
+                Kampala, Uganda<br />
+                P.O. Box 7062
+              </p>
+            </div>
+            
+            <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200 text-black">
+              <div className="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center text-yellow-600 mb-4">
+                <Phone className="h-6 w-6" />
+              </div>
+              <h3 className="text-xl font-semibold mb-2">Phone</h3>
+              <p className="text-gray-600 mb-2">Office Hours: 9am - 5pm (EAT)</p>
+              <a href="tel:+256700123456" className="text-yellow-600 hover:underline">+256 700 123 456</a>
             </div>
           </div>
         </div>

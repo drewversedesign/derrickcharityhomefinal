@@ -11,14 +11,12 @@ import About from "./pages/About";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Blog from "./pages/Blog";
 import BlogPostDetail from "./pages/BlogPostDetail";
-
-// These will need to be implemented later
-const FoodNutrition = () => <div>Food & Nutrition Program</div>;
-const Education = () => <div>Education Program</div>;
-const Healthcare = () => <div>Healthcare Program</div>;
-const Community = () => <div>Community Engagement Program</div>;
-const Stories = () => <div>Success Stories</div>;
-const Donate = () => <div>Donate</div>;
+import FoodNutrition from "./pages/FoodNutrition";
+import Education from "./pages/Education";
+import Healthcare from "./pages/Healthcare";
+import Community from "./pages/Community";
+import SuccessStories from "./pages/SuccessStories";
+import Donate from "./pages/Donate";
 
 const App = () => {
   const [queryClient] = useState(() => new QueryClient());
@@ -36,7 +34,7 @@ const App = () => {
             <Route path="/programs/education" element={<Education />} />
             <Route path="/programs/healthcare" element={<Healthcare />} />
             <Route path="/programs/community" element={<Community />} />
-            <Route path="/stories" element={<Stories />} />
+            <Route path="/stories" element={<SuccessStories />} />
             <Route path="/donate" element={<Donate />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/blog" element={<Blog />} />
