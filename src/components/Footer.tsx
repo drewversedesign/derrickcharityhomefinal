@@ -150,9 +150,15 @@ const Footer = () => {
             © {new Date().getFullYear()} Derrick Charity Home. All rights reserved.
           </p>
           <div className="flex items-center">
-            <span className="text-gray-400 text-sm mr-2">Made with</span>
-            <Heart className="h-4 w-4 text-red-500 mr-2" />
-            <span className="text-gray-400 text-sm">in Uganda</span>
+            <span className="text-gray-400 text-sm mr-2">Made by</span>
+            <a 
+              href="https://drewversedesign.online" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-gray-400 text-sm hover:text-yellow-400 transition-colors"
+            >
+              Drewverse Design
+            </a>
           </div>
         </div>
       </div>
