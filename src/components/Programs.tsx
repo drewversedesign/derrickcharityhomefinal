@@ -43,7 +43,7 @@ const Programs = () => {
       icon: <Users className="w-10 h-10 text-white transition-transform duration-300 transform" />,
       title: "Community Engagement",
       description: "We work closely with local communities to develop sustainable solutions and create a supportive environment for children.",
-      image: "https://raw.githubusercontent.com/drewversedesign/Derrick-Charity-Home/refs/heads/main/elite_foundation_uganda-18-05-2025-0029.webp"
+      image: "https://raw.githubusercontent.com/drewversedesign/Derrick-Charity-Home/refs/heads/main/elite_foundation_uganda-18-05-2025-0006.webp"
     }
   ];
   
