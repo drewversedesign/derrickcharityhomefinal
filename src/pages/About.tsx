@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import { motion } from "framer-motion";
 import { useEffect } from 'react';
 import PageLayout from '@/components/PageLayout';
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Card, CardContent } from "@/components/ui/card";
 
 const About = () => {
@@ -29,7 +28,7 @@ const About = () => {
               transition={{ duration: 0.5 }} 
               className="text-4xl font-bold mb-6"
             >
-              About WRLDS Technologies
+              About Derrick Charity Home
             </motion.h1>
             
             <div className="prose prose-lg max-w-none">
@@ -39,7 +38,7 @@ const About = () => {
                 transition={{ duration: 0.5, delay: 0.2 }} 
                 className="text-xl text-gray-600 mb-12"
               >
-                We're a team of innovators dedicated to revolutionizing smart textile technology for industries worldwide.
+                We're dedicated to caring for, educating, and empowering orphans and needy children in Uganda.
               </motion.p>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
@@ -51,12 +50,12 @@ const About = () => {
                 >
                   <h2 className="text-3xl font-bold">Our Mission</h2>
                   <p className="text-gray-600">
-                    At WRLDS Technologies, we're on a mission to transform ordinary textiles into intelligent, 
-                    data-driven solutions that improve safety, performance, and quality of life across industries.
+                    At Derrick Charity Home, our mission is to care for, educate, and empower orphans and 
+                    needy children by providing basic needs and a stable environment for growth.
                   </p>
                   <p className="text-gray-600">
-                    We believe that by embedding intelligence into everyday fabrics, we can create a more 
-                    connected, responsive, and safer world.
+                    We believe that every child deserves access to food, education, healthcare, 
+                    and a loving home, regardless of their background.
                   </p>
                 </motion.div>
                 
@@ -69,20 +68,20 @@ const About = () => {
                   <h3 className="text-2xl font-bold mb-4">Our Values</h3>
                   <ul className="space-y-3">
                     <li className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-gray-700 mt-1 mr-3 flex-shrink-0" />
-                      <span><strong>Innovation:</strong> We push boundaries to create solutions that weren't possible before.</span>
+                      <CheckCircle className="h-5 w-5 text-yellow-500 mt-1 mr-3 flex-shrink-0" />
+                      <span><strong>Compassion:</strong> Acting with empathy and understanding in all endeavors.</span>
                     </li>
                     <li className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-gray-700 mt-1 mr-3 flex-shrink-0" />
-                      <span><strong>Quality:</strong> We're committed to excellence in every sensor, algorithm, and solution we deliver.</span>
+                      <CheckCircle className="h-5 w-5 text-yellow-500 mt-1 mr-3 flex-shrink-0" />
+                      <span><strong>Integrity:</strong> Maintaining the highest ethical standards and transparency.</span>
                     </li>
                     <li className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-gray-700 mt-1 mr-3 flex-shrink-0" />
-                      <span><strong>Collaboration:</strong> We work closely with our clients to ensure their unique needs are met.</span>
+                      <CheckCircle className="h-5 w-5 text-yellow-500 mt-1 mr-3 flex-shrink-0" />
+                      <span><strong>Sustainability:</strong> Focusing on long-term solutions, not just immediate relief.</span>
                     </li>
                     <li className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-gray-700 mt-1 mr-3 flex-shrink-0" />
-                      <span><strong>Impact:</strong> We measure success by the tangible differences our technology makes in the real world.</span>
+                      <CheckCircle className="h-5 w-5 text-yellow-500 mt-1 mr-3 flex-shrink-0" />
+                      <span><strong>Collaboration:</strong> Working with communities to develop effective solutions.</span>
                     </li>
                   </ul>
                 </motion.div>
@@ -97,19 +96,17 @@ const About = () => {
                 <h2 className="text-3xl font-bold mb-6">Our Story</h2>
                 <div className="bg-white rounded-xl border border-gray-200 p-8 shadow-sm">
                   <p className="text-gray-600 mb-4">
-                    We started with the ambition to make an inherently scattered and complex development area modular, 
-                    smart and available to analog brands. After successfully raising millions of dollars for development, 
-                    we spent the first two years in full code mode.
+                    Derrick Charity Home was founded in 2021 by Nimwesiga Derrick, who holds a Diploma in Social Work & Social 
+                    Administration from Bishop Stuart University. After witnessing the challenges faced by orphaned and vulnerable 
+                    children in his community, Derrick was inspired to create a safe haven where these children could thrive.
                   </p>
                   <p className="text-gray-600 mb-4">
-                    The goal was to turn all the scattered hardware and building blocks into simple modules to be 
-                    assembled like Lego. During this time we took in a range of customers for whom we built prototypes - 
-                    a way for us to make sure what we built had bearing in real world use cases.
+                    What started as a small initiative to provide basic needs to a handful of children has grown into a 
+                    comprehensive program that now supports over 40 children with food, education, healthcare, and emotional support.
                   </p>
                   <p className="text-gray-600">
-                    In 2023 we felt we had reached a technology level allowing us to start working on enterprise level. 
-                    Since then, we have focused on textile integrations because of the enormous potential smart textiles 
-                    have across multiple industries from healthcare to public safety.
+                    Today, Derrick Charity Home continues to expand its reach and impact, working closely with the local 
+                    community to identify and address the needs of vulnerable children in Uganda.
                   </p>
                 </div>
               </motion.div>
@@ -120,63 +117,109 @@ const About = () => {
                 transition={{ duration: 0.6, delay: 0.6 }}
                 className="mb-16"
               >
-                <h2 className="text-3xl font-bold mb-6">Our Team</h2>
+                <h2 className="text-3xl font-bold mb-6">Our Impact</h2>
                 <p className="text-gray-600 mb-8">
-                  Our diverse team combines expertise in textile engineering, electronics, software development, 
-                  artificial intelligence, and industry-specific knowledge to deliver holistic solutions.
+                  Since our founding in 2021, we have made significant strides in improving the lives of orphaned and 
+                  vulnerable children in Uganda through our various programs and initiatives.
                 </p>
                 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                  {[
-                    {
-                      name: "Felix von Heland",
-                      role: "CEO and Founder",
-                      bio: "Leading WRLDS Technologies with a vision to transform the future of smart textiles.",
-                      image: "/lovable-uploads/aa5291bd-2417-4c1e-9a02-0bcc71a92507.png"
-                    },
-                    {
-                      name: "Niek Bijman",
-                      role: "Software Lead",
-                      bio: "Specializing in cloud infrastructure and APIs for seamless data integration.",
-                      image: "/lovable-uploads/e502f601-c519-43a8-86f5-5fa89ae50d2f.png"
-                    },
-                    {
-                      name: "Chengjie Li",
-                      role: "Hardware Lead",
-                      bio: "Expert in embedded systems engineering, leading our hardware development efforts.",
-                      image: "/lovable-uploads/3de85ddd-15e1-4216-9697-f91abb9a47ce.png"
-                    },
-                    {
-                      name: "Love",
-                      role: "COO",
-                      bio: "Overseeing daily operations and ensuring business objectives are met effectively.",
-                      image: "/lovable-uploads/a9bb9110-964a-43b0-a5ab-7162140cd133.png"
-                    }
-                  ].map((member, i) => (
-                    <Card key={i} className="bg-gray-50 border border-gray-100 overflow-hidden">
-                      <CardContent className="p-6">
-                        <div className="flex flex-col items-center text-center">
-                          <div className="w-32 h-32 relative mb-4 rounded-full overflow-hidden">
-                            <img 
-                              src={member.image} 
-                              alt={member.name} 
-                              className="w-full h-full object-cover filter grayscale" 
-                            />
-                          </div>
-                          <h3 className="font-bold text-lg">{member.name}</h3>
-                          <p className="text-gray-500 text-sm mb-2">{member.role}</p>
-                          <p className="text-gray-600 text-sm">{member.bio}</p>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                  <div className="bg-gray-50 border border-gray-100 rounded-lg p-6 text-center">
+                    <h3 className="text-3xl font-bold text-yellow-600 mb-2">40+</h3>
+                    <p className="text-gray-700 font-medium">Children Supported</p>
+                  </div>
+                  <div className="bg-gray-50 border border-gray-100 rounded-lg p-6 text-center">
+                    <h3 className="text-3xl font-bold text-yellow-600 mb-2">7+</h3>
+                    <p className="text-gray-700 font-medium">Active Programs</p>
+                  </div>
+                  <div className="bg-gray-50 border border-gray-100 rounded-lg p-6 text-center">
+                    <h3 className="text-3xl font-bold text-yellow-600 mb-2">4</h3>
+                    <p className="text-gray-700 font-medium">Years of Service</p>
+                  </div>
+                </div>
+                
+                <p className="text-gray-600">
+                  Each day, we strive to create meaningful change in the lives of the children we serve, 
+                  focusing not only on meeting their immediate needs but also on empowering them to build 
+                  a brighter future for themselves and their communities.
+                </p>
+              </motion.div>
+              
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }} 
+                animate={{ opacity: 1, y: 0 }} 
+                transition={{ duration: 0.6, delay: 0.6 }}
+                className="mb-16"
+              >
+                <h2 className="text-3xl font-bold mb-6">Our Team</h2>
+                <p className="text-gray-600 mb-8">
+                  Led by our founder, Nimwesiga Derrick, our dedicated team works tirelessly to create a nurturing environment for the children in our care.
+                </p>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  <Card className="bg-gray-50 border border-gray-100 overflow-hidden">
+                    <CardContent className="p-6">
+                      <div className="flex flex-col items-center text-center">
+                        <div className="w-32 h-32 relative mb-4 rounded-full overflow-hidden">
+                          <img 
+                            src="/lovable-uploads/6b0637e9-4a7b-40d0-b219-c8b7f879f93e.png" 
+                            alt="Nimwesiga Derrick" 
+                            className="w-full h-full object-cover" 
+                          />
                         </div>
-                      </CardContent>
-                    </Card>
-                  ))}
+                        <h3 className="font-bold text-lg">Nimwesiga Derrick</h3>
+                        <p className="text-gray-500 text-sm mb-2">Founder & Director</p>
+                        <p className="text-gray-600 text-sm">
+                          Holds a Diploma in Social Work & Social Administration from Bishop Stuart University, dedicated to improving children's lives.
+                        </p>
+                      </div>
+                    </CardContent>
+                  </Card>
+                  
+                  <Card className="bg-gray-50 border border-gray-100 overflow-hidden">
+                    <CardContent className="p-6">
+                      <div className="flex flex-col items-center text-center">
+                        <div className="w-32 h-32 relative mb-4 rounded-full overflow-hidden">
+                          <img 
+                            src="/lovable-uploads/93ab0638-8190-4ccf-897f-21fda7f4f5ad.png" 
+                            alt="Mary Nakimuli" 
+                            className="w-full h-full object-cover" 
+                          />
+                        </div>
+                        <h3 className="font-bold text-lg">Mary Nakimuli</h3>
+                        <p className="text-gray-500 text-sm mb-2">Education Coordinator</p>
+                        <p className="text-gray-600 text-sm">
+                          Former teacher with 10+ years of experience, manages our education support programs.
+                        </p>
+                      </div>
+                    </CardContent>
+                  </Card>
+                  
+                  <Card className="bg-gray-50 border border-gray-100 overflow-hidden">
+                    <CardContent className="p-6">
+                      <div className="flex flex-col items-center text-center">
+                        <div className="w-32 h-32 relative mb-4 rounded-full overflow-hidden">
+                          <img 
+                            src="/lovable-uploads/5ca619e6-2139-4879-9b3c-94777ab85e2a.png" 
+                            alt="John Mukasa" 
+                            className="w-full h-full object-cover" 
+                          />
+                        </div>
+                        <h3 className="font-bold text-lg">John Mukasa</h3>
+                        <p className="text-gray-500 text-sm mb-2">Healthcare Manager</p>
+                        <p className="text-gray-600 text-sm">
+                          Registered nurse overseeing health initiatives and preventive care programs.
+                        </p>
+                      </div>
+                    </CardContent>
+                  </Card>
                 </div>
               </motion.div>
             </div>
             
             <div className="mt-16 pt-8 border-t border-gray-200">
-              <Link to="/careers" className="inline-flex items-center px-5 py-3 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition-all group">
-                Join Our Team
+              <Link to="/donate" className="inline-flex items-center px-5 py-3 bg-yellow-500 text-gray-900 rounded-lg hover:bg-yellow-400 transition-all group">
+                Support Our Work
                 <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>

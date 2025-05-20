@@ -1,83 +1,92 @@
 
 import React from 'react';
-import { Mail, Linkedin, Phone } from 'lucide-react';
+import { Mail, Phone, MapPin } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 const ContactInfo = () => {
+  const scrollToContactForm = (e: React.MouseEvent) => {
+    e.preventDefault();
+    const contactForm = document.getElementById('contact');
+    if (contactForm) {
+      contactForm.scrollIntoView({
+        behavior: 'smooth'
+      });
+    }
+  };
+
   return (
-    <section id="contact-info" className="bg-gradient-to-b from-white to-black text-white relative py-[15px] md:py-[25px]">
+    <section id="contact-info" className="bg-gradient-to-b from-white to-gray-100 text-gray-800 relative py-[15px] md:py-[25px]">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10 md:mb-16">
-          <div className="inline-block mb-3 px-3 py-1 bg-white text-black rounded-full text-sm font-medium">
+          <div className="inline-block mb-3 px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm font-medium">
             Get In Touch
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800">
             Contact Us Today
           </h2>
           <p className="text-gray-700 text-lg max-w-2xl mx-auto">
-            Have questions about our AI-powered sensor solutions? Reach out to our team and let's discuss how we can help bring your ideas to life.
+            Want to support our mission? Have questions about our programs? Reach out to us and learn how you can make a difference in a child's life.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Felix's Contact Info */}
-          <div className="bg-white rounded-xl shadow-xl p-6 md:p-8 border border-gray-700">
+          {/* Contact Information */}
+          <div className="bg-white rounded-xl shadow-xl p-6 md:p-8 border border-gray-200">
             <div className="flex flex-col items-center text-center">
               <img 
-                src="/lovable-uploads/aa5291bd-2417-4c1e-9a02-0bcc71a92507.png"
-                alt="Felix von Heland"
-                className="w-32 h-32 rounded-full mb-4 object-cover filter grayscale"
+                src="/lovable-uploads/6b0637e9-4a7b-40d0-b219-c8b7f879f93e.png"
+                alt="Nimwesiga Derrick"
+                className="w-32 h-32 rounded-full mb-4 object-cover"
               />
-              <h3 className="text-xl font-bold text-gray-900">Felix von Heland</h3>
-              <p className="text-gray-600 mb-4">CEO and Founder</p>
+              <h3 className="text-xl font-bold text-gray-900">Nimwesiga Derrick</h3>
+              <p className="text-gray-600 mb-4">Founder & Director</p>
               <div className="flex flex-col space-y-3">
-                <a href="mailto:felix@wrlds.com" className="flex items-center text-gray-700 hover:text-blue-600">
+                <a href="mailto:info@derrickcharityhome.org" className="flex items-center text-gray-700 hover:text-yellow-600">
                   <Mail className="w-5 h-5 mr-2" />
-                  felix@wrlds.com
+                  info@derrickcharityhome.org
                 </a>
-                <a 
-                  href="https://www.linkedin.com/in/felixvonheland/" 
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center text-gray-700 hover:text-blue-600"
-                >
-                  <Linkedin className="w-5 h-5 mr-2" />
-                  LinkedIn Profile
+                <a href="tel:+256700000000" className="flex items-center text-gray-700 hover:text-yellow-600">
+                  <Phone className="w-5 h-5 mr-2" />
+                  +256 700 000 000
                 </a>
+                <div className="flex items-center text-gray-700">
+                  <MapPin className="w-5 h-5 mr-2" />
+                  123 Hope Street, Kampala, Uganda
+                </div>
               </div>
             </div>
           </div>
 
-          {/* Love's Contact Info */}
-          <div className="bg-white rounded-xl shadow-xl p-6 md:p-8 border border-gray-700">
+          {/* Donation Call to Action */}
+          <div className="bg-white rounded-xl shadow-xl p-6 md:p-8 border border-gray-200">
             <div className="flex flex-col items-center text-center">
-              <img 
-                src="/lovable-uploads/a9bb9110-964a-43b0-a5ab-7162140cd133.png"
-                alt="Love Anderberg"
-                className="w-32 h-32 rounded-full mb-4 object-cover filter grayscale"
-              />
-              <h3 className="text-xl font-bold text-gray-900">Love Anderberg</h3>
-              <p className="text-gray-600 mb-4">COO</p>
-              <div className="flex flex-col space-y-3">
-                <a href="mailto:love@wrlds.com" className="flex items-center text-gray-700 hover:text-blue-600">
-                  <Mail className="w-5 h-5 mr-2" />
-                  love@wrlds.com
-                </a>
-                <a 
-                  href="https://www.linkedin.com/in/love-anderberg-67549a174/" 
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center text-gray-700 hover:text-blue-600"
+              <div className="w-20 h-20 bg-yellow-100 rounded-full flex items-center justify-center mb-4">
+                <Heart className="w-10 h-10 text-yellow-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900">Make a Donation</h3>
+              <p className="text-gray-600 mb-6">
+                Your support can change a child's life. Every contribution helps us provide food, education, and healthcare to children in need.
+              </p>
+              <div className="space-y-4 w-full">
+                <Button 
+                  onClick={scrollToContactForm}
+                  className="w-full bg-yellow-500 hover:bg-yellow-400 text-gray-900"
                 >
-                  <Linkedin className="w-5 h-5 mr-2" />
-                  LinkedIn Profile
-                </a>
-                <a href="tel:+46760149508" className="flex items-center text-gray-700 hover:text-blue-600">
-                  <Phone className="w-5 h-5 mr-2" />
-                  076-014 95 08
-                </a>
+                  Donate Now
+                </Button>
+                <p className="text-sm text-gray-500">
+                  We accept donations via mobile money, bank transfer, and in-kind contributions.
+                </p>
               </div>
             </div>
           </div>
+        </div>
+        
+        <div className="mt-10 text-center">
+          <h3 className="text-lg font-bold mb-2">Operating Hours</h3>
+          <p className="text-gray-700">
+            Monday-Friday: 9am-5pm | Saturday: 10am-2pm | Sunday: Closed
+          </p>
         </div>
       </div>
     </section>
@@ -85,3 +94,6 @@ const ContactInfo = () => {
 };
 
 export default ContactInfo;
+
+// We need to import the Heart icon which wasn't included at the top
+import { Heart } from 'lucide-react';
