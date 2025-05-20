@@ -12,19 +12,19 @@ const Stories = () => {
     {
       title: "Education Support Program",
       description: "Our education program has helped over 30 children access quality education through school fees support, learning materials, and tutoring.",
-      image: "/lovable-uploads/c30e0487-2fa0-41d1-9a0b-699cb2855388.png",
+      image: "https://raw.githubusercontent.com/drewversedesign/Derrick-Charity-Home/refs/heads/main/elite_foundation_uganda-18-05-2025-0008.webp",
       link: "#"
     },
     {
       title: "Nutrition & Health Initiative",
       description: "We provide daily nutritious meals and regular health checkups to ensure children grow healthy and strong, supporting their development.",
-      image: "/lovable-uploads/6fdd3d0d-5dca-470a-a845-bd7b07bff599.png",
+      image: "https://raw.githubusercontent.com/drewversedesign/Derrick-Charity-Home/refs/heads/main/elite_foundation_uganda-18-05-2025-0024.webp",
       link: "#"
     },
     {
       title: "Community Engagement",
       description: "Working with local communities, we develop sustainable solutions that empower families and create a supportive environment for children.",
-      image: "/lovable-uploads/14ea3fe0-19d6-425c-b95b-4117bc41f3ca.png",
+      image: "https://raw.githubusercontent.com/drewversedesign/Derrick-Charity-Home/refs/heads/main/elite_foundation_uganda-18-05-2025-0007.jpg?raw=true",
       link: "#"
     }
   ];

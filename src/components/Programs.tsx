@@ -25,41 +25,41 @@ const Programs = () => {
       icon: <Heart className="w-10 h-10 text-white transition-transform duration-300 transform" />,
       title: "Food & Nutrition",
       description: "Our nutrition program ensures children receive balanced, nutritious meals daily to support healthy growth and development.",
-      image: "/lovable-uploads/761e2d9d-3a1c-458b-9848-dd1d7b42d1b9.png"
+      image: "https://raw.githubusercontent.com/drewversedesign/Derrick-Charity-Home/refs/heads/main/elite_foundation_uganda-18-05-2025-0033.webp"
     }, 
     {
       icon: <Book className="w-10 h-10 text-white transition-transform duration-300 transform" />,
       title: "Education Support",
       description: "We provide school fees, supplies, and tutoring to ensure every child has access to quality education and a brighter future.",
-      image: "/lovable-uploads/a1ef45a0-dde4-4b30-856f-8032dd58247e.png"
+      image: "https://raw.githubusercontent.com/drewversedesign/Derrick-Charity-Home/refs/heads/main/elite_foundation_uganda-18-05-2025-0030.webp"
     }, 
     {
       icon: <CircleCheck className="w-10 h-10 text-white transition-transform duration-300 transform" />,
       title: "Healthcare Access",
       description: "Regular medical check-ups, treatment, and preventive care are provided to ensure children remain healthy and thrive.",
-      image: "/lovable-uploads/b862d5ae-6abb-44da-84f0-00a222f62906.png"
+      image: "https://raw.githubusercontent.com/drewversedesign/Derrick-Charity-Home/refs/heads/main/elite_foundation_uganda-18-05-2025-0028.webp"
     }, 
     {
       icon: <Users className="w-10 h-10 text-white transition-transform duration-300 transform" />,
       title: "Community Engagement",
       description: "We work closely with local communities to develop sustainable solutions and create a supportive environment for children.",
-      image: "/lovable-uploads/11e92b89-ed02-453a-9888-56cd91807f2d.png"
+      image: "https://raw.githubusercontent.com/drewversedesign/Derrick-Charity-Home/refs/heads/main/elite_foundation_uganda-18-05-2025-0029.webp"
     }
   ];
   
   const successStories = [
     {
-      image: "/lovable-uploads/39605e90-8478-4fee-b1b9-cee41df66f10.png",
+      image: "https://raw.githubusercontent.com/drewversedesign/Derrick-Charity-Home/refs/heads/main/elite_foundation_uganda-18-05-2025-0031.webp",
       title: "Sarah's Education Journey",
       description: "Sarah joined us at age 8 and is now pursuing her dream of becoming a teacher through our education support program."
     }, 
     {
-      image: "/lovable-uploads/7293c494-769c-421b-9028-d8ccb0bdd80a.png",
+      image: "https://raw.githubusercontent.com/drewversedesign/Derrick-Charity-Home/refs/heads/main/elite_foundation_uganda-18-05-2025-0032.webp",
       title: "David's Healthcare Success",
       description: "Regular healthcare provided by our program helped David overcome chronic health issues and thrive in school."
     }, 
     {
-      image: "/lovable-uploads/39671993-1bb4-4bb6-8819-3ca5c07c0042.png",
+      image: "https://raw.githubusercontent.com/drewversedesign/Derrick-Charity-Home/refs/heads/main/elite_foundation_uganda-18-05-2025-0021.webp",
       title: "Community Food Initiative",
       description: "Our nutrition program has expanded to support 40+ children with daily nutritious meals, improving health outcomes."
     }

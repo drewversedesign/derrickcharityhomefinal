@@ -97,7 +97,7 @@ const Impact = () => {
             </div>
             <div className="h-[300px] lg:h-auto overflow-hidden">
               <img 
-                src="/lovable-uploads/6b0637e9-4a7b-40d0-b219-c8b7f879f93e.png" 
+                src="https://github.com/drewversedesign/Derrick-Charity-Home/blob/main/elite_foundation_uganda-18-05-2025-0002.jpg?raw=true" 
                 alt="Derrick Charity Home Founder" 
                 className="w-full h-full object-cover object-center"
               />

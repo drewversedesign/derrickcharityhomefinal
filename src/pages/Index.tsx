@@ -7,6 +7,7 @@ import Stories from '@/components/Stories';
 import BlogPreview from '@/components/BlogPreview';
 import SEO from '@/components/SEO';
 import { useEffect } from 'react';
+import FloatingContactButton from '@/components/FloatingContactButton';
 
 const Index = () => {
   // Fix any ID conflicts when the page loads
@@ -23,7 +24,7 @@ const Index = () => {
       <SEO 
         title="Derrick Charity Home - Supporting Orphans in Uganda" 
         description="Derrick Charity Home provides care, education, and empowerment for orphans and needy children in Uganda, offering food, healthcare, and a loving environment."
-        imageUrl="/lovable-uploads/526dc38a-25fa-40d4-b520-425b23ae0464.png"
+        imageUrl="https://raw.githubusercontent.com/drewversedesign/Derrick-Charity-Home/refs/heads/main/elite_foundation_uganda-18-05-2025-0002.webp"
         keywords={['charity', 'orphanage', 'uganda', 'children support', 'education', 'healthcare', 'nutrition', 'donation', 'community']}
       />
       <Hero />
@@ -31,6 +32,7 @@ const Index = () => {
       <Impact />
       <Stories />
       <BlogPreview />
+      <FloatingContactButton />
     </PageLayout>
   );
 };
