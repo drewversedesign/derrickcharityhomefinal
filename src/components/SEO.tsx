@@ -18,38 +18,41 @@ interface SEOProps {
 }
 
 const SEO: React.FC<SEOProps> = ({
-  title = 'WRLDS',
-  description = 'WRLDS Technologies: Pioneering smart engineering solutions with textile sensors for sports, safety, and performance monitoring.',
+  title = 'Derrick Charity Home - Hope and Support for Children in Uganda',
+  description = 'Derrick Charity Home provides care, education, and empowerment for orphans and vulnerable children in Uganda. Join us in making a difference.',
   type = 'website',
-  name = 'WRLDS Technologies',
-  imageUrl = '/lovable-uploads/48ecf6e2-5a98-4a9d-af6f-ae2265cd4098.png',
+  name = 'Derrick Charity Home',
+  imageUrl = 'https://github.com/drewversedesign/Derrick-Charity-Home/blob/main/IMG-20250518-WA0045.jpg?raw=true', // Generic placeholder
   publishDate,
   modifiedDate,
   author,
   category,
-  keywords = ['smart textiles', 'wearable technology', 'textile sensors', 'sports tech', 'safety monitoring', 'performance analytics'],
+  keywords = ['charity', 'orphanage', 'uganda', 'children support', 'education', 'healthcare', 'non-profit', 'community development'],
   isBlogPost = false
 }) => {
   const location = useLocation();
-  const currentUrl = `https://wrlds.com${location.pathname}`;
-  const absoluteImageUrl = imageUrl.startsWith('http') ? imageUrl : `https://wrlds.com${imageUrl}`;
+  // Assuming the production URL will be derrickcharityhome.org. Adjust if different.
+  const siteUrl = 'https://www.derrickcharityhome.org'; 
+  const currentUrl = `${siteUrl}${location.pathname}`;
+  const absoluteImageUrl = imageUrl.startsWith('http') ? imageUrl : `${siteUrl}${imageUrl.startsWith('/') ? '' : '/'}${imageUrl}`;
 
   // Create base Organization JSON-LD structured data
   const organizationStructuredData = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'WRLDS Technologies',
-    url: 'https://wrlds.com',
-    logo: 'https://wrlds.com/lovable-uploads/14ea3fe0-19d6-425c-b95b-4117bc41f3ca.png',
-    description: 'Pioneering smart engineering solutions with textile sensors',
+    name: 'Derrick Charity Home',
+    url: siteUrl,
+    logo: `${siteUrl}/lovable-uploads/39671993-1bb4-4bb6-8819-3ca5c07c0042.png`, // TODO: Update with actual logo URL
+    description: 'Providing care, education, and empowerment for orphans and vulnerable children in Uganda.',
     contactPoint: {
       '@type': 'ContactPoint',
-      contactType: 'customer service',
-      email: 'info@wrlds.com'
+      contactType: 'customer support', // Or 'general inquiries'
+      email: 'info@derrickcharityhome.org' // Placeholder email
     },
-    sameAs: [
-      'https://www.linkedin.com/company/wrlds-technologies',
-      'https://twitter.com/wrldstechnologies'
+    sameAs: [ // Add actual social media links if available
+      // 'https://www.facebook.com/derrickcharityhome',
+      // 'https://www.twitter.com/derrickcharity',
+      // 'https://www.instagram.com/derrickcharityhome'
     ]
   };
 
@@ -66,15 +69,15 @@ const SEO: React.FC<SEOProps> = ({
     datePublished: publishDate,
     dateModified: modifiedDate || publishDate,
     author: {
-      '@type': 'Organization',
-      name: author || 'WRLDS Technologies'
+      '@type': 'Organization', // Can be Person if specific authors
+      name: author || 'Derrick Charity Home'
     },
     publisher: {
       '@type': 'Organization',
-      name: 'WRLDS Technologies',
+      name: 'Derrick Charity Home',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://wrlds.com/lovable-uploads/14ea3fe0-19d6-425c-b95b-4117bc41f3ca.png'
+        url: `${siteUrl}/lovable-uploads/39671993-1bb4-4bb6-8819-3ca5c07c0042.png` // TODO: Update with actual logo URL
       }
     },
     description: description,
