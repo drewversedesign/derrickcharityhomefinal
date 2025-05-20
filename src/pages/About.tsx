@@ -1,19 +1,15 @@
-
 import { ArrowLeft, CheckCircle, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { motion } from "framer-motion";
 import { useEffect } from 'react';
 import PageLayout from '@/components/PageLayout';
 import { Card, CardContent } from "@/components/ui/card";
-
 const About = () => {
   // Scroll to top on mount
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  
-  return (
-    <PageLayout>
+  return <PageLayout>
       <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto">
           <div className="max-w-6xl mx-auto">
@@ -22,32 +18,40 @@ const About = () => {
               Back to Home
             </Link>
             
-            <motion.h1 
-              initial={{ opacity: 0, y: -10 }} 
-              animate={{ opacity: 1, y: 0 }} 
-              transition={{ duration: 0.5 }} 
-              className="text-4xl font-bold mb-6"
-            >
+            <motion.h1 initial={{
+            opacity: 0,
+            y: -10
+          }} animate={{
+            opacity: 1,
+            y: 0
+          }} transition={{
+            duration: 0.5
+          }} className="text-4xl font-bold mb-6">
               About Derrick Charity Home
             </motion.h1>
             
             <div className="prose prose-lg max-w-none">
-              <motion.p 
-                initial={{ opacity: 0 }} 
-                animate={{ opacity: 1 }} 
-                transition={{ duration: 0.5, delay: 0.2 }} 
-                className="text-xl text-gray-600 mb-12"
-              >
+              <motion.p initial={{
+              opacity: 0
+            }} animate={{
+              opacity: 1
+            }} transition={{
+              duration: 0.5,
+              delay: 0.2
+            }} className="text-xl text-gray-600 mb-12">
                 We're dedicated to caring for, educating, and empowering orphans and needy children in Uganda.
               </motion.p>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
-                <motion.div 
-                  initial={{ opacity: 0, x: -20 }} 
-                  animate={{ opacity: 1, x: 0 }} 
-                  transition={{ duration: 0.6 }}
-                  className="space-y-6"
-                >
+                <motion.div initial={{
+                opacity: 0,
+                x: -20
+              }} animate={{
+                opacity: 1,
+                x: 0
+              }} transition={{
+                duration: 0.6
+              }} className="space-y-6">
                   <h2 className="text-3xl font-bold">Our Mission</h2>
                   <p className="text-gray-600">
                     At Derrick Charity Home, our mission is to care for, educate, and empower orphans and 
@@ -59,12 +63,16 @@ const About = () => {
                   </p>
                 </motion.div>
                 
-                <motion.div
-                  initial={{ opacity: 0, x: 20 }} 
-                  animate={{ opacity: 1, x: 0 }} 
-                  transition={{ duration: 0.6, delay: 0.2 }}
-                  className="bg-gray-50 rounded-2xl p-8 border border-gray-100"
-                >
+                <motion.div initial={{
+                opacity: 0,
+                x: 20
+              }} animate={{
+                opacity: 1,
+                x: 0
+              }} transition={{
+                duration: 0.6,
+                delay: 0.2
+              }} className="bg-gray-50 rounded-2xl p-8 border border-gray-100">
                   <h3 className="text-2xl font-bold mb-4">Our Values</h3>
                   <ul className="space-y-3">
                     <li className="flex items-start">
@@ -87,12 +95,16 @@ const About = () => {
                 </motion.div>
               </div>
               
-              <motion.div 
-                initial={{ opacity: 0, y: 20 }} 
-                animate={{ opacity: 1, y: 0 }} 
-                transition={{ duration: 0.6, delay: 0.4 }}
-                className="mb-16"
-              >
+              <motion.div initial={{
+              opacity: 0,
+              y: 20
+            }} animate={{
+              opacity: 1,
+              y: 0
+            }} transition={{
+              duration: 0.6,
+              delay: 0.4
+            }} className="mb-16">
                 <h2 className="text-3xl font-bold mb-6">Our Story</h2>
                 <div className="bg-white rounded-xl border border-gray-200 p-8 shadow-sm">
                   <p className="text-gray-600 mb-4">
@@ -111,12 +123,16 @@ const About = () => {
                 </div>
               </motion.div>
               
-              <motion.div 
-                initial={{ opacity: 0, y: 20 }} 
-                animate={{ opacity: 1, y: 0 }} 
-                transition={{ duration: 0.6, delay: 0.6 }}
-                className="mb-16"
-              >
+              <motion.div initial={{
+              opacity: 0,
+              y: 20
+            }} animate={{
+              opacity: 1,
+              y: 0
+            }} transition={{
+              duration: 0.6,
+              delay: 0.6
+            }} className="mb-16">
                 <h2 className="text-3xl font-bold mb-6">Our Impact</h2>
                 <p className="text-gray-600 mb-8">
                   Since our founding in 2021, we have made significant strides in improving the lives of orphaned and 
@@ -145,12 +161,16 @@ const About = () => {
                 </p>
               </motion.div>
               
-              <motion.div 
-                initial={{ opacity: 0, y: 20 }} 
-                animate={{ opacity: 1, y: 0 }} 
-                transition={{ duration: 0.6, delay: 0.6 }}
-                className="mb-16"
-              >
+              <motion.div initial={{
+              opacity: 0,
+              y: 20
+            }} animate={{
+              opacity: 1,
+              y: 0
+            }} transition={{
+              duration: 0.6,
+              delay: 0.6
+            }} className="mb-16">
                 <h2 className="text-3xl font-bold mb-6">Our Team</h2>
                 <p className="text-gray-600 mb-8">
                   Led by our founder, Nimwesiga Derrick, our dedicated team works tirelessly to create a nurturing environment for the children in our care.
@@ -161,11 +181,7 @@ const About = () => {
                     <CardContent className="p-6">
                       <div className="flex flex-col items-center text-center">
                         <div className="w-32 h-32 relative mb-4 rounded-full overflow-hidden">
-                          <img 
-                            src="/lovable-uploads/6b0637e9-4a7b-40d0-b219-c8b7f879f93e.png" 
-                            alt="Nimwesiga Derrick" 
-                            className="w-full h-full object-cover" 
-                          />
+                          <img src="/lovable-uploads/6b0637e9-4a7b-40d0-b219-c8b7f879f93e.png" alt="Nimwesiga Derrick" className="w-full h-full object-cover" />
                         </div>
                         <h3 className="font-bold text-lg">Nimwesiga Derrick</h3>
                         <p className="text-gray-500 text-sm mb-2">Founder & Director</p>
@@ -177,42 +193,10 @@ const About = () => {
                   </Card>
                   
                   <Card className="bg-gray-50 border border-gray-100 overflow-hidden">
-                    <CardContent className="p-6">
-                      <div className="flex flex-col items-center text-center">
-                        <div className="w-32 h-32 relative mb-4 rounded-full overflow-hidden">
-                          <img 
-                            src="/lovable-uploads/93ab0638-8190-4ccf-897f-21fda7f4f5ad.png" 
-                            alt="Mary Nakimuli" 
-                            className="w-full h-full object-cover" 
-                          />
-                        </div>
-                        <h3 className="font-bold text-lg">Mary Nakimuli</h3>
-                        <p className="text-gray-500 text-sm mb-2">Education Coordinator</p>
-                        <p className="text-gray-600 text-sm">
-                          Former teacher with 10+ years of experience, manages our education support programs.
-                        </p>
-                      </div>
-                    </CardContent>
+                    
                   </Card>
                   
-                  <Card className="bg-gray-50 border border-gray-100 overflow-hidden">
-                    <CardContent className="p-6">
-                      <div className="flex flex-col items-center text-center">
-                        <div className="w-32 h-32 relative mb-4 rounded-full overflow-hidden">
-                          <img 
-                            src="/lovable-uploads/5ca619e6-2139-4879-9b3c-94777ab85e2a.png" 
-                            alt="John Mukasa" 
-                            className="w-full h-full object-cover" 
-                          />
-                        </div>
-                        <h3 className="font-bold text-lg">John Mukasa</h3>
-                        <p className="text-gray-500 text-sm mb-2">Healthcare Manager</p>
-                        <p className="text-gray-600 text-sm">
-                          Registered nurse overseeing health initiatives and preventive care programs.
-                        </p>
-                      </div>
-                    </CardContent>
-                  </Card>
+                  
                 </div>
               </motion.div>
             </div>
@@ -226,8 +210,6 @@ const About = () => {
           </div>
         </div>
       </section>
-    </PageLayout>
-  );
+    </PageLayout>;
 };
-
 export default About;
