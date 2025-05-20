@@ -1,11 +1,9 @@
-
 import PageLayout from '@/components/PageLayout';
 import Hero from '@/components/Hero';
 import Programs from '@/components/Programs';
 import Impact from '@/components/Impact';
 import Stories from '@/components/Stories';
-import Gallery from '@/components/Gallery'; // Import the new Gallery component
-import BlogPreview from '@/components/BlogPreview';
+import Gallery from '@/components/Gallery';
 import SEO from '@/components/SEO';
 import { useEffect } from 'react';
 import FloatingContactButton from '@/components/FloatingContactButton';
@@ -37,15 +35,14 @@ const Index = () => {
       <SEO 
         title="Derrick Charity Home - Supporting Orphans in Uganda" 
         description="Derrick Charity Home provides care, education, and empowerment for orphans and needy children in Uganda, offering food, healthcare, and a loving environment."
-        imageUrl="https://github.com/drewversedesign/Derrick-Charity-Home/blob/main/IMG-20250518-WA0045.jpg?raw=true" // Updated placeholder
+        imageUrl="https://github.com/drewversedesign/Derrick-Charity-Home/blob/main/IMG-20250518-WA0045.jpg?raw=true"
         keywords={['charity', 'orphanage', 'uganda', 'children support', 'education', 'healthcare', 'nutrition', 'donation', 'community', 'derrick charity home']}
       />
       <Hero />
       <Programs />
       <Impact />
       <Stories />
-      <Gallery images={sampleImagesForGallery} title="Moments at Derrick Charity Home" /> {/* Added Gallery section */}
-      <BlogPreview />
+      <Gallery images={sampleImagesForGallery} title="Moments at Derrick Charity Home" />
       <FloatingContactButton />
     </PageLayout>
   );

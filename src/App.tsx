@@ -9,8 +9,7 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import About from "./pages/About";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
-import Blog from "./pages/Blog";
-import BlogPostDetail from "./pages/BlogPostDetail";
+// Blog and BlogPostDetail imports removed
 import FoodNutrition from "./pages/FoodNutrition";
 import Education from "./pages/Education";
 import Healthcare from "./pages/Healthcare";
@@ -37,8 +36,9 @@ const App = () => {
             <Route path="/stories" element={<SuccessStories />} />
             <Route path="/donate" element={<Donate />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-            <Route path="/blog" element={<Blog />} />
-            <Route path="/blog/:slug" element={<BlogPostDetail />} />
+            {/* Blog routes removed */}
+            {/* <Route path="/blog" element={<Blog />} /> */}
+            {/* <Route path="/blog/:slug" element={<BlogPostDetail />} /> */}
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
