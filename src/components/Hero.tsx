@@ -46,7 +46,7 @@ const Hero = () => {
   return <motion.div className="relative mt-16 md:mt-0 w-full max-w-[100vw]" initial="hidden" animate="visible" variants={containerVariants}>
       <div className="banner-container bg-black relative overflow-hidden h-[700px] md:h-[750px] w-full">
         <div className="absolute inset-0 bg-black w-full">
-          <img src="/lovable-uploads/700e27d7-0513-4bfa-8ac4-f7fd6087594c.png" alt="Derrick Charity Home Children" className={`w-full h-full object-cover opacity-70 ${isMobile ? 'object-right' : 'object-center'}`} />
+          <img src="https://github.com/drewversedesign/Derrick-Charity-Home/blob/main/IMG-20250518-WA0045.jpg?raw=true" alt="Derrick Charity Home Children" className={`w-full h-full object-cover opacity-70 ${isMobile ? 'object-right' : 'object-center'}`} />
           <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-white"></div>
         </div>
         
