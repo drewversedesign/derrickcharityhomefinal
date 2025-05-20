@@ -181,7 +181,7 @@ const About = () => {
                     <CardContent className="p-6">
                       <div className="flex flex-col items-center text-center">
                         <div className="w-32 h-32 relative mb-4 rounded-full overflow-hidden">
-                          <img src="/lovable-uploads/6b0637e9-4a7b-40d0-b219-c8b7f879f93e.png" alt="Nimwesiga Derrick" className="w-full h-full object-cover" />
+                          <img alt="Nimwesiga Derrick" className="w-full h-full object-cover" src="https://github.com/drewversedesign/Derrick-Charity-Home/blob/main/IMG-20250518-WA0045.jpg?raw=true" />
                         </div>
                         <h3 className="font-bold text-lg">Nimwesiga Derrick</h3>
                         <p className="text-gray-500 text-sm mb-2">Founder & Director</p>
