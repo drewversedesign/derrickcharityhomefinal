@@ -1,3 +1,4 @@
+
 import PageLayout from '@/components/PageLayout';
 import Hero from '@/components/Hero';
 import Programs from '@/components/Programs';
@@ -8,16 +9,40 @@ import SEO from '@/components/SEO';
 import { useEffect } from 'react';
 import FloatingContactButton from '@/components/FloatingContactButton';
 
-// Sample images for the gallery
-const sampleImagesForGallery = [
-  { src: "https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", alt: "Hands holding a heart made of soil with a sprouting plant, symbolizing care and growth." },
-  { src: "https://images.unsplash.com/photo-1593113630405-ea54c8d7d898?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", alt: "Children in a classroom in Uganda, attentively raising their hands to participate." },
-  { src: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", alt: "A group of smiling African children playing together joyfully outdoors." },
-  { src: "https://images.unsplash.com/photo-1517088614125-7637e8109142?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", alt: "A child gratefully receiving a nutritious meal, highlighting food support programs." },
-  { src: "https://images.unsplash.com/photo-1541696432-620602506002?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", alt: "Happy children engaged in an outdoor activity at Derrick Charity Home." },
-  { src: "https://images.unsplash.com/photo-1606092195730-dbd0b0d00a9a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", alt: "Children in Uganda diligently learning with books, emphasizing educational support." },
-  { src: "https://images.unsplash.com/photo-1599008633840-052c7f756085?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", alt: "A volunteer kindly helping a child with their schoolwork." },
-  { src: "https://images.unsplash.com/photo-1504198266287-1659872e6ae7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", alt: "Community members gathered for an event at Derrick Charity Home, showing community involvement." },
+// Updated images for the gallery with the provided links
+const galleryImages = [
+  { 
+    src: "https://raw.githubusercontent.com/drewversedesign/Derrick-Charity-Home/refs/heads/main/elite_foundation_uganda-18-05-2025-0002.webp", 
+    alt: "Children from Derrick Charity Home gathered together" 
+  },
+  { 
+    src: "https://raw.githubusercontent.com/drewversedesign/Derrick-Charity-Home/refs/heads/main/elite_foundation_uganda-18-05-2025-0033.webp", 
+    alt: "Children enjoying a nutritious meal at Derrick Charity Home" 
+  },
+  { 
+    src: "https://raw.githubusercontent.com/drewversedesign/Derrick-Charity-Home/refs/heads/main/elite_foundation_uganda-18-05-2025-0030.webp", 
+    alt: "Education support program at Derrick Charity Home" 
+  },
+  { 
+    src: "https://raw.githubusercontent.com/drewversedesign/Derrick-Charity-Home/refs/heads/main/elite_foundation_uganda-18-05-2025-0024.webp", 
+    alt: "Children participating in community activities" 
+  },
+  { 
+    src: "https://raw.githubusercontent.com/drewversedesign/Derrick-Charity-Home/refs/heads/main/elite_foundation_uganda-18-05-2025-0028.webp", 
+    alt: "Healthcare initiatives for children at Derrick Charity Home" 
+  },
+  { 
+    src: "https://raw.githubusercontent.com/drewversedesign/Derrick-Charity-Home/refs/heads/main/elite_foundation_uganda-18-05-2025-0029.webp", 
+    alt: "Community engagement and development activities" 
+  },
+  { 
+    src: "https://github.com/drewversedesign/Derrick-Charity-Home/blob/main/elite_foundation_uganda-18-05-2025-0002.jpg?raw=true", 
+    alt: "Group of children supported by Derrick Charity Home" 
+  },
+  { 
+    src: "https://raw.githubusercontent.com/drewversedesign/Derrick-Charity-Home/refs/heads/main/elite_foundation_uganda-18-05-2025-0031.webp", 
+    alt: "Success stories from Derrick Charity Home beneficiaries" 
+  },
 ];
 
 const Index = () => {
@@ -42,7 +67,7 @@ const Index = () => {
       <Programs />
       <Impact />
       <Stories />
-      <Gallery images={sampleImagesForGallery} title="Moments at Derrick Charity Home" />
+      <Gallery images={galleryImages} title="Moments at Derrick Charity Home" />
       <FloatingContactButton />
     </PageLayout>
   );
