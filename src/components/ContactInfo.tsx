@@ -1,8 +1,6 @@
-
 import React from 'react';
 import { Mail, Phone, MapPin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-
 const ContactInfo = () => {
   const scrollToContactForm = (e: React.MouseEvent) => {
     e.preventDefault();
@@ -13,9 +11,7 @@ const ContactInfo = () => {
       });
     }
   };
-
-  return (
-    <section id="contact-info" className="bg-gradient-to-b from-white to-gray-100 text-gray-800 relative py-[15px] md:py-[25px]">
+  return <section id="contact-info" className="bg-gradient-to-b from-white to-gray-100 text-gray-800 relative py-[15px] md:py-[25px]">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10 md:mb-16">
           <div className="inline-block mb-3 px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm font-medium">
@@ -33,11 +29,7 @@ const ContactInfo = () => {
           {/* Contact Information */}
           <div className="bg-white rounded-xl shadow-xl p-6 md:p-8 border border-gray-200">
             <div className="flex flex-col items-center text-center">
-              <img 
-                src="/lovable-uploads/6b0637e9-4a7b-40d0-b219-c8b7f879f93e.png"
-                alt="Nimwesiga Derrick"
-                className="w-32 h-32 rounded-full mb-4 object-cover"
-              />
+              <img alt="Nimwesiga Derrick" className="w-32 h-32 rounded-full mb-4 object-cover" src="https://github.com/drewversedesign/Derrick-Charity-Home/blob/main/IMG-20250518-WA0045.jpg?raw=true" />
               <h3 className="text-xl font-bold text-gray-900">Nimwesiga Derrick</h3>
               <p className="text-gray-600 mb-4">Founder & Director</p>
               <div className="flex flex-col space-y-3">
@@ -68,10 +60,7 @@ const ContactInfo = () => {
                 Your support can change a child's life. Every contribution helps us provide food, education, and healthcare to children in need.
               </p>
               <div className="space-y-4 w-full">
-                <Button 
-                  onClick={scrollToContactForm}
-                  className="w-full bg-yellow-500 hover:bg-yellow-400 text-gray-900"
-                >
+                <Button onClick={scrollToContactForm} className="w-full bg-yellow-500 hover:bg-yellow-400 text-gray-900">
                   Donate Now
                 </Button>
                 <p className="text-sm text-gray-500">
@@ -89,10 +78,8 @@ const ContactInfo = () => {
           </p>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default ContactInfo;
 
 // We need to import the Heart icon which wasn't included at the top
