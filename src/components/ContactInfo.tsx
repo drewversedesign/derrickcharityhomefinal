@@ -33,13 +33,13 @@ const ContactInfo = () => {
               <h3 className="text-xl font-bold text-gray-900">Nimwesiga Derrick</h3>
               <p className="text-gray-600 mb-4">Founder & Director</p>
               <div className="flex flex-col space-y-3">
-                <a href="mailto:info@derrickcharityhome.org" className="flex items-center text-gray-700 hover:text-yellow-600">
+                <a href="mailto:nimwesigaderrick@gmail.com" className="flex items-center text-gray-700 hover:text-yellow-600">
                   <Mail className="w-5 h-5 mr-2" />
-                  info@derrickcharityhome.org
+                  nimwesigaderrick@gmail.com
                 </a>
-                <a href="tel:+256700000000" className="flex items-center text-gray-700 hover:text-yellow-600">
+                <a href="tel:+256709444011" className="flex items-center text-gray-700 hover:text-yellow-600">
                   <Phone className="w-5 h-5 mr-2" />
-                  +256 700 000 000
+                  +256 709 444 011
                 </a>
                 <div className="flex items-center text-gray-700">
                   <MapPin className="w-5 h-5 mr-2" />
