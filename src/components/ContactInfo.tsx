@@ -1,7 +1,26 @@
-import React from 'react';
-import { Mail, Phone, MapPin } from 'lucide-react';
+import React, { useState } from 'react';
+import { Mail, Phone, MapPin, Copy } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useToast } from '@/components/ui/use-toast';
 const ContactInfo = () => {
+  const { toast } = useToast();
+
+  const copyToClipboard = async (text: string, label: string) => {
+    try {
+      await navigator.clipboard.writeText(text);
+      toast({
+        title: "Copied!",
+        description: `${label} copied to clipboard`,
+      });
+    } catch (err) {
+      toast({
+        title: "Error",
+        description: "Failed to copy to clipboard",
+        variant: "destructive",
+      });
+    }
+  };
+
   const scrollToContactForm = (e: React.MouseEvent) => {
     e.preventDefault();
     const contactForm = document.getElementById('contact');
@@ -62,10 +81,28 @@ const ContactInfo = () => {
               <div className="space-y-4 w-full">
                 <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
                   <h4 className="font-semibold text-gray-900 mb-2">Remitly Money Transfer</h4>
-                  <div className="space-y-1 text-sm text-gray-700">
-                    <p><strong>Phone:</strong> +256 709 444 011</p>
-                    <p><strong>Name:</strong> NIMWESIGA DERRICK</p>
-                    <p><strong>Country:</strong> Uganda</p>
+                  <div className="space-y-2 text-sm text-gray-700">
+                    <div 
+                      className="flex items-center justify-between cursor-pointer hover:bg-yellow-100 p-2 rounded transition-colors"
+                      onClick={() => copyToClipboard('+256709444011', 'Phone number')}
+                    >
+                      <span><strong>Phone:</strong> +256 709 444 011</span>
+                      <Copy className="w-4 h-4 text-gray-500" />
+                    </div>
+                    <div 
+                      className="flex items-center justify-between cursor-pointer hover:bg-yellow-100 p-2 rounded transition-colors"
+                      onClick={() => copyToClipboard('NIMWESIGA DERRICK', 'Name')}
+                    >
+                      <span><strong>Name:</strong> NIMWESIGA DERRICK</span>
+                      <Copy className="w-4 h-4 text-gray-500" />
+                    </div>
+                    <div 
+                      className="flex items-center justify-between cursor-pointer hover:bg-yellow-100 p-2 rounded transition-colors"
+                      onClick={() => copyToClipboard('Uganda', 'Country')}
+                    >
+                      <span><strong>Country:</strong> Uganda</span>
+                      <Copy className="w-4 h-4 text-gray-500" />
+                    </div>
                   </div>
                 </div>
                 <p className="text-sm text-gray-500">
