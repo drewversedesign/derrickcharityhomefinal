@@ -60,11 +60,16 @@ const ContactInfo = () => {
                 Your support can change a child's life. Every contribution helps us provide food, education, and healthcare to children in need.
               </p>
               <div className="space-y-4 w-full">
-                <Button onClick={scrollToContactForm} className="w-full bg-yellow-500 hover:bg-yellow-400 text-gray-900">
-                  Donate Now
-                </Button>
+                <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
+                  <h4 className="font-semibold text-gray-900 mb-2">Remitly Money Transfer</h4>
+                  <div className="space-y-1 text-sm text-gray-700">
+                    <p><strong>Phone:</strong> +256 709 444 011</p>
+                    <p><strong>Name:</strong> NIMWESIGA DERRICK</p>
+                    <p><strong>Country:</strong> Uganda</p>
+                  </div>
+                </div>
                 <p className="text-sm text-gray-500">
-                  We accept donations via mobile money, bank transfer, and in-kind contributions.
+                  We also accept donations via mobile money, bank transfer, and in-kind contributions.
                 </p>
               </div>
             </div>
